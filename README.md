@@ -3,7 +3,7 @@
 > *"Build the celebration. Protect the spirit. Make Morya shine."*
 
 **Team:** Morya Makers  
-**Live Demo:** [Live Demo — Coming Soon]
+**Live Demo:** [https://morya-the-festival-guardian-6z5g9cd4k-praveenkumar03.vercel.app/]
 
 ---
 
