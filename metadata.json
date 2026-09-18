@@ -1,0 +1,6 @@
+{
+  "name": "Morya: The Festival Guardian",
+  "description": "Build the celebration. Protect the spirit. Make Morya shine. A festive Ganesh Chaturthi game by Morya Makers.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

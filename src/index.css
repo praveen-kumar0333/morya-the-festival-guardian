@@ -1,0 +1,225 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-heading: 'Cinzel', serif;
+    --font-body: 'Outfit', sans-serif;
+  }
+
+  body {
+    font-family: var(--font-body);
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  h1, h2, h3, .font-heading {
+    font-family: var(--font-heading);
+  }
+}
+
+@keyframes flame-flicker {
+  0%, 100% {
+    transform: scale(1) rotate(-1deg);
+    opacity: 0.95;
+    filter: drop-shadow(0 0 6px rgba(245, 158, 11, 0.8));
+  }
+  25% {
+    transform: scale(1.08, 0.95) rotate(1deg);
+    opacity: 1;
+    filter: drop-shadow(0 0 10px rgba(239, 68, 68, 0.9));
+  }
+  50% {
+    transform: scale(0.95, 1.05) rotate(-2deg);
+    opacity: 0.9;
+    filter: drop-shadow(0 0 7px rgba(251, 191, 36, 0.85));
+  }
+  75% {
+    transform: scale(1.04, 1.02) rotate(2deg);
+    opacity: 0.98;
+    filter: drop-shadow(0 0 12px rgba(245, 158, 11, 0.95));
+  }
+}
+
+@keyframes soft-float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes gentle-pulse {
+  0%, 100% {
+    opacity: 0.85;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.03);
+  }
+}
+
+.animate-flame {
+  animation: flame-flicker 1.8s infinite ease-in-out;
+  transform-origin: bottom center;
+}
+
+.animate-float {
+  animation: soft-float 4s infinite ease-in-out;
+}
+
+.animate-gentle-pulse {
+  animation: gentle-pulse 3s infinite ease-in-out;
+}
+
+@keyframes petal-fall {
+  0% {
+    transform: translateY(-20px) translateX(0px) rotate(0deg);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.85;
+  }
+  85% {
+    opacity: 0.85;
+  }
+  100% {
+    transform: translateY(105vh) translateX(45px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes sparkle-twinkle {
+  0%, 100% {
+    transform: scale(0.6);
+    opacity: 0.2;
+    filter: drop-shadow(0 0 2px rgba(253, 224, 71, 0.4));
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 0.95;
+    filter: drop-shadow(0 0 8px rgba(250, 204, 21, 0.9));
+  }
+}
+
+@keyframes divine-ray {
+  0%, 100% {
+    opacity: 0.25;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.45;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes score-popup-float {
+  0% {
+    transform: translateY(0) scale(0.85);
+    opacity: 0;
+  }
+  25% {
+    transform: translateY(-8px) scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-32px) scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes celebration-pop {
+  0% {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes swing-gentle {
+  0%, 100% {
+    transform: rotate(-3deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+}
+
+@keyframes bounce-subtle {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+.animate-petal-fall {
+  animation: petal-fall linear infinite;
+}
+
+.animate-sparkle-twinkle {
+  animation: sparkle-twinkle 3s infinite ease-in-out;
+}
+
+.animate-divine-ray {
+  animation: divine-ray 6s infinite ease-in-out;
+}
+
+.animate-score-popup {
+  animation: score-popup-float 1.2s ease-out forwards;
+}
+
+.animate-celebration-pop {
+  animation: celebration-pop 0.5s ease-out forwards;
+}
+
+.animate-swing {
+  animation: swing-gentle 3.5s infinite ease-in-out;
+  transform-origin: top center;
+}
+
+.animate-bounce-subtle {
+  animation: bounce-subtle 2s infinite ease-in-out;
+}
+
+/* Reduced motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .animate-petal-fall,
+  .animate-sparkle-twinkle,
+  .animate-divine-ray,
+  .animate-flame,
+  .animate-float,
+  .animate-gentle-pulse,
+  .animate-swing,
+  .animate-bounce-subtle,
+  .animate-score-popup,
+  .animate-celebration-pop {
+    animation: none !important;
+  }
+}
+
+/* Custom scrollbar for game modals */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(41, 15, 5, 0.5);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(217, 119, 6, 0.5);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(245, 158, 11, 0.8);
+}
